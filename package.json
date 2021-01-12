@@ -1,6 +1,6 @@
 {
   "name": "@buibis/code-config",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "code config guide",
   "main": "index.js",
   "scripts": {
