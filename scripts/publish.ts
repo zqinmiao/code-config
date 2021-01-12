@@ -24,6 +24,15 @@ const packageJson = require("../package.json");
 // }
 
 /**
+ * 将当前版本作为一个新标签提交至远程仓库
+ */
+async function pushGitTag() {
+  const versionStr = `v${packageJson.version}`;
+  shell.exec(`git tag -a ${versionStr} -m "release: ${versionStr}"`);
+  shell.exec(`git push origin ${versionStr}`);
+}
+
+/**
  * 更新版本号
  */
 async function updateVersion() {
@@ -71,6 +80,7 @@ async function publish() {
 updateVersion()
   .then(() => publish())
   .then(() => changeNpmRegistry(true))
+  .then(() => pushGitTag())
   .then(() => {
     process.exit(0);
   });
