@@ -1,0 +1,3 @@
+# 相关文档：https://martin.beryllium.net/2019/08/02/automatically-resolve-npm-package-lock-conflicts-using-git/
+
+package-lock.json merge=theirs
