@@ -23,13 +23,14 @@ const packageJson = require("../package.json");
 //   return shell.exec("cd build");
 // }
 
+let currentVersion = `v${packageJson.version}`;
+
 /**
  * 将当前版本作为一个新标签提交至远程仓库
  */
 async function pushGitTag() {
-  const versionStr = `v${packageJson.version}`;
-  shell.exec(`git tag -a ${versionStr} -m "release: ${versionStr}"`);
-  shell.exec(`git push origin ${versionStr}`);
+  shell.exec(`git tag -a ${currentVersion} -m "release: ${currentVersion}"`);
+  shell.exec(`git push origin ${currentVersion}`);
 }
 
 /**
@@ -48,6 +49,7 @@ async function updateVersion() {
     console.log(colors.red("版本号已存在！"));
     process.exit(1);
   }
+  currentVersion = `v${response.value}`;
   return shell.exec(`npm version ${response.value} -m "release: ${response.value}"`);
 }
 
