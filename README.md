@@ -1,4 +1,6 @@
-# 介绍
+# code-config
+
+[![npm package](https://img.shields.io/npm/v/@buibis/code-config?color=brightgreen)](https://www.npmjs.com/package/@buibis/code-config)
 
 > 工欲善其事，必先利其器。
 
@@ -16,9 +18,9 @@ $ npm i npm install --save-dev @buibis/code-config
 
 > 修改了相关规则后，有可能出现不会生效的情况，这时首先尝试重启编辑器
 
-- 相关 linter 需要配合编辑器插件进行使用，才能自动格式化代码。[代码格式化]("## VScode 下 prettier 自动格式化")
+- 相关 linter 需要配合编辑器插件进行使用，才能自动格式化代码。[代码格式化](https://github.com/zqinmiao/code-config#vscode-%E4%B8%8B-prettier-%E8%87%AA%E5%8A%A8%E6%A0%BC%E5%BC%8F%E5%8C%96)
 
-- 编辑器配合[EditorConfig](https://editorconfig.org/)一起使用，[参考]()
+- 编辑器配合[EditorConfig](https://editorconfig.org/)一起使用，[参考](https://github.com/zqinmiao/code-config/blob/master/docs/editor.md)
 
 ## 版本控制
 

@@ -83,7 +83,7 @@ module.exports = {
 
 且，vscode 下设置为所有插件打开自动修复。
 
-```json
+```javascript
 {
   // 为包括 ESLint 在内的所有插件打开“自动修复”
   "editor.codeActionsOnSave": {
