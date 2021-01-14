@@ -47,18 +47,16 @@ async function updateVersion() {
   }
 
   currentVersion = `${response.value}`;
+
+  // 生成changelog
+  shell.exec(`npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0`);
+  shell.exec(`git add .`);
   // 更改版本号
-  const child = shell.exec(`npm version ${response.value}`);
+  const child = shell.exec(`npm version ${currentVersion} -m "chore(release): ${currentVersion}"`);
   if (child.code >= 1) {
     process.exit(1);
   }
   return;
-}
-
-async function changelog() {
-  shell.exec(`npx conventional-changelog -p angular -i CHANGELOG.md -s`);
-  shell.exec(`git add .`);
-  return shell.exec(`git commit -m "chore(release): ${currentVersion}"`);
 }
 
 // 当前的registry
@@ -94,7 +92,6 @@ const publishNpm = async target => {
   packageJson = require(`${process.cwd()}${target}package.json`);
   return updateVersion()
     .then(() => publish(target))
-    .then(() => changelog())
     .then(() => changeNpmRegistry(true))
     .then(() => pushGit())
     .then(() => {
