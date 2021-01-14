@@ -1,8 +1,11 @@
 {
   "name": "@buibis/code-config",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "code config guide",
   "main": "index.js",
+  "bin": {
+    "buibis-cc": "./bin/index.js"
+  },
   "scripts": {
     "build:publish": "npx ts-node ./scripts/publish.ts",
     "codecheck": "npm run eslint:dev && npm run ts:check",
@@ -13,9 +16,13 @@
     "eslint:typescript": "npx eslint -c './typescript.js' './tests/**/*.{ts,tsx}'",
     "eslint:vue": "npx eslint -c './vue.js' './tests/**/*.{vue,js}'",
     "lint:style": "npx stylelint '**/*.{css,scss,sass,less}'",
+    "checkCodeStyle": "prettier --check './*/**'",
     "coverage:install": "cd eslint-rule-coverage && npm run install:latest",
     "coverage:check": "cd eslint-rule-coverage && npx ts-node './index.ts'",
     "stylelint-find-rules": "npx ts-node './scripts/stylelint-rule-coverage.ts'"
+  },
+  "engines": {
+    "node": "^10.12.0 || >=12.0.0"
   },
   "husky": {
     "hooks": {
@@ -39,25 +46,28 @@
   },
   "homepage": "https://github.com/zqinmiao/code-config#readme",
   "dependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "@typescript-eslint/eslint-plugin": "^4.12.0",
     "@typescript-eslint/parser": "^4.12.0",
+    "colors": "^1.4.0",
+    "commander": "^6.2.1",
+    "cross-env": "^7.0.3",
     "eslint": "^7.17.0",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-vue": "^7.4.1",
+    "husky": "^4.3.7",
+    "json-format": "^1.0.1",
     "prettier": "^2.2.1",
+    "prompts": "^2.4.0",
+    "semver": "^7.3.4",
+    "shelljs": "^0.8.4",
+    "standard-version": "^9.1.0",
     "stylelint": "^13.8.0",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-standard": "^20.0.0",
-    "stylelint-find-new-rules": "^3.0.1",
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
-    "cross-env": "^7.0.3",
-    "colors": "^1.4.0",
-    "husky": "^4.3.7",
-    "json-format": "^1.0.1",
-    "prompts": "^2.4.0",
-    "shelljs": "^0.8.4"
+    "stylelint-find-new-rules": "^3.0.1"
   },
   "devDependencies": {
     "@types/node": "^14.14.20",
