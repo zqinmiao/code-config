@@ -28,9 +28,10 @@ let currentVersion = `v${packageJson.version}`;
 /**
  * 将当前版本作为一个新标签提交至远程仓库
  */
-async function pushGitTag() {
+async function pushGit() {
   shell.exec(`git tag -a ${currentVersion} -m "release: ${currentVersion}"`);
   shell.exec(`git push origin ${currentVersion}`);
+  shell.exec(`git push`);
 }
 
 /**
@@ -82,7 +83,7 @@ async function publish() {
 updateVersion()
   .then(() => publish())
   .then(() => changeNpmRegistry(true))
-  .then(() => pushGitTag())
+  .then(() => pushGit())
   .then(() => {
     process.exit(0);
   });

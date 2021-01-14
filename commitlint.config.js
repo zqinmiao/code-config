@@ -20,7 +20,7 @@ module.exports = {
         "build",
         // 命令||脚本
         "ci",
-        // 临时事务
+        // 事务
         "chore",
         // 文档
         "docs",
@@ -38,8 +38,6 @@ module.exports = {
         "style",
         // 测试相关
         "test",
-        // 发布版本
-        "release",
       ],
     ],
   },

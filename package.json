@@ -1,6 +1,6 @@
 {
   "name": "@buibis/code-config",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "code config guide",
   "main": "index.js",
   "bin": {
@@ -52,6 +52,7 @@
     "@typescript-eslint/parser": "^4.12.0",
     "colors": "^1.4.0",
     "commander": "^6.2.1",
+    "conventional-changelog-cli": "^2.1.1",
     "cross-env": "^7.0.3",
     "eslint": "^7.17.0",
     "eslint-plugin-react": "^7.22.0",
@@ -63,7 +64,6 @@
     "prompts": "^2.4.0",
     "semver": "^7.3.4",
     "shelljs": "^0.8.4",
-    "standard-version": "^9.1.0",
     "stylelint": "^13.8.0",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-standard": "^20.0.0",

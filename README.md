@@ -91,7 +91,7 @@ module.exports = {
 
 ### TypeScript
 
-适用`*.{ts,tsx}`的校验
+适用`*.{ts,tsx,js}`的校验
 
 ```javascript
 module.exports = {
@@ -116,6 +116,19 @@ module.exports = {
 ```javascript
 module.exports = {
   extends: ["@buibis/code-config", "@buibis/code-config/vue"],
+};
+```
+
+### node
+
+适用`*.{js,ts}`的校验
+
+```javascript
+module.exports = {
+  env: {
+    node: true,
+  },
+  extends: ["@buibis/code-config", "@buibis/code-config/typescript"],
 };
 ```
 

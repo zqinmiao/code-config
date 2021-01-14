@@ -29,6 +29,7 @@ node_modules/
 .prettierrc.js
 .stylelintignore
 .stylelintrc.js
+.gitattributes
 
 # misc
 .DS_Store
