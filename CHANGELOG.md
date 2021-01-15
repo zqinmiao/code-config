@@ -1,4 +1,8 @@
-## [0.0.9](https://github.com/zqinmiao/code-config/compare/v0.0.8...v0.0.9) (2021-01-15)
+## [0.0.10](https://github.com/zqinmiao/code-config/compare/v0.0.9...v0.0.10) (2021-01-15)
+
+
+
+## [0.0.9](https://github.com/zqinmiao/code-config/compare/v0.0.8...v0.0.9) (2021-01-14)
 
 
 
