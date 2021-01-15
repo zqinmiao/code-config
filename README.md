@@ -11,7 +11,7 @@
 > 为保证依赖的版本一致，在安装@buibis/code-config 时，同时会安装相关工具及插件，可查看 package.json 中的 dependencies。
 
 ```sh
-$ npm i npm install --save-dev @buibis/code-config
+$ npm install --save-dev @buibis/code-config
 ```
 
 # 使用
@@ -25,6 +25,7 @@ $ npm i npm install --save-dev @buibis/code-config
 ## 版本控制
 
 - 忽略文件[.gitignore](https://help.github.com/articles/ignoring-files/)
+- [自动化版本控制 CLI](https://www.npmjs.com/package/@buibis/buibis-version)
 
 在项目根目录创建`commitlint.config.js`文件，内容如下:
 
@@ -61,7 +62,7 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  extends: ["@buibis/code-config"],
+  extends: ["./node_modules/@buibis/code-config"],
   env: {
     // 你的环境变量（包含多个预定义的全局变量）
     //
@@ -85,7 +86,7 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  extends: ["@buibis/code-config", "@buibis/code-config/react"],
+  extends: ["./node_modules/@buibis/code-config", "./node_modules/@buibis/code-config/react"],
 };
 ```
 
@@ -95,7 +96,7 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  extends: ["@buibis/code-config", "@buibis/code-config/typescript"],
+  extends: ["./node_modules/@buibis/code-config", "./node_modules/@buibis/code-config/typescript"],
 };
 ```
 
@@ -105,7 +106,11 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  extends: ["@buibis/code-config", "@buibis/code-config/react", "@buibis/code-config/typescript"],
+  extends: [
+    "./node_modules/@buibis/code-config",
+    "./node_modules/@buibis/code-config/react",
+    "./node_modules/@buibis/code-config/typescript",
+  ],
 };
 ```
 
@@ -115,7 +120,7 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  extends: ["@buibis/code-config", "@buibis/code-config/vue"],
+  extends: ["./node_modules/@buibis/code-config", "./node_modules/@buibis/code-config/vue"],
 };
 ```
 
