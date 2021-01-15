@@ -1,4 +1,9 @@
-## [0.0.10](https://github.com/zqinmiao/code-config/compare/v0.0.9...v0.0.10) (2021-01-15)
+## [0.0.11](https://github.com/zqinmiao/code-config/compare/v0.0.9...v0.0.11) (2021-01-15)
+
+
+### Features
+
+* 去除CLI，删除非必要dependencies ([636dd26](https://github.com/zqinmiao/code-config/commit/636dd262cc167afeb223b8f9a1ceac1b762431aa))
 
 
 
