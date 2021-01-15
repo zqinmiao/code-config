@@ -48,15 +48,19 @@ async function updateVersion() {
 
   currentVersion = `${response.value}`;
 
-  // 生成changelog
-  shell.exec(`npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0`);
-  shell.exec(`git add .`);
   // 更改版本号
   const child = shell.exec(`npm version ${currentVersion} -m "chore(release): ${currentVersion}"`);
   if (child.code >= 1) {
     process.exit(1);
   }
   return;
+}
+
+async function changelog() {
+  // 生成changelog，并与上次的git commit合并
+  shell.exec(`npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0`);
+  shell.exec(`git add CHANGELOG.md`);
+  shell.exec(`git commit --amend --no-edit`);
 }
 
 // 当前的registry
@@ -83,7 +87,11 @@ async function publish(target) {
   console.log("开始发布");
   return changeNpmRegistry().then(() => {
     // shell.exec(`npm pack .${target}`);
-    shell.exec(`npm publish .${target}`);
+    const child = shell.exec(`npm publish .${target}`);
+
+    if (child.code >= 1) {
+      process.exit(1);
+    }
     shell.exec(`curl -X PUT https://npm.taobao.org/sync/${packageJson.name}`);
   });
 }
@@ -91,6 +99,7 @@ async function publish(target) {
 const publishNpm = async target => {
   packageJson = require(`${process.cwd()}${target}package.json`);
   return updateVersion()
+    .then(() => changelog())
     .then(() => publish(target))
     .then(() => changeNpmRegistry(true))
     .then(() => pushGit())
