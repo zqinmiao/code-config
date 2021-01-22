@@ -133,7 +133,7 @@ module.exports = {
   env: {
     node: true,
   },
-  extends: ["@buibis/code-config", "@buibis/code-config/typescript"],
+  extends: ["./node_modules/@buibis/code-config", "./node_modules/@buibis/code-config/typescript"],
 };
 ```
 
