@@ -60,7 +60,7 @@
     "stylelint-find-new-rules": "^3.0.1"
   },
   "devDependencies": {
-    "@buibis/buibis-version": "0.0.1",
+    "@buibis/buibis-version": "0.0.7",
     "@types/node": "^14.14.20",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
