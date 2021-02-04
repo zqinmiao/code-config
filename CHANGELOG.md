@@ -1,3 +1,13 @@
+## [0.0.12](https://github.com/zqinmiao/code-config/compare/v0.0.9...v0.0.12) (2021-02-04)
+
+
+### Features
+
+* stylelint增加兼容css modules的语法 ([1cd2c19](https://github.com/zqinmiao/code-config/commit/1cd2c1977064eb41967b76fe32e843581ad9a26d))
+* 去除CLI，删除非必要dependencies ([636dd26](https://github.com/zqinmiao/code-config/commit/636dd262cc167afeb223b8f9a1ceac1b762431aa))
+
+
+
 ## [0.0.11](https://github.com/zqinmiao/code-config/compare/v0.0.9...v0.0.11) (2021-01-15)
 
 ### Features
