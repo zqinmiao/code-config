@@ -41,7 +41,7 @@
      * 只有 'amd' and 'system' modules 才支持
      */
     // "outFile": "./" /* Concatenate and emit output to single file. */,
-    // 重定向输出目录。
+    // 重定向输出目录。相对于tsconfig.json的位置
     "outDir": "./dist" /* Redirect output structure to the directory. */,
     // 当TypeScript编译文件时，它在输出目录中保持与输入目录中相同的目录结构，文档及配置：https://www.typescriptlang.org/tsconfig#rootDir
     // "rootDir": "./" /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */,

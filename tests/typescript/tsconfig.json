@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    // "baseUrl": "./",
+    // "rootDir": "./",
+    // 输出文件位置相对于tsconfig.json所在的目录
+    // 如果是继承的tsconfig，并没有覆盖outDir，则依继承的为准
+    "outDir": "./dist"
+  }
+}

@@ -4,7 +4,7 @@
   "description": "code config guide",
   "main": "index.js",
   "scripts": {
-    "build:publish": "npx ts-node ./scripts/publish.ts",
+    "r:publish": "buibis-version -p",
     "codecheck": "npm run eslint:dev && npm run ts:check",
     "ts:check": "npx tsc -p ./tsconfig.json --noEmit",
     "eslint:dev": "npx eslint '**/*.{js,jsx,ts,tsx}'",
