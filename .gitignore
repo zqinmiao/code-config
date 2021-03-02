@@ -6,6 +6,11 @@ node_modules/
 # testing
 /coverage
 
+# cache
+deploy_versions/
+.temp/
+.rn_temp/
+
 # production
 /build
 /dist
@@ -35,6 +40,7 @@ yarn-error.log*
 # Editor directories and others files
 .git
 .idea
+.vscode
 *.iml
 *.out
 *.pyc
