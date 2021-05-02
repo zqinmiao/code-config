@@ -1,5 +1,12 @@
 # code-config
 
+---
+**NOTE**
+
+仓库已移至[这里](https://github.com/zqinmiao/buibis-code-standard-fe/tree/master/packages/code-config)
+
+---
+
 [![npm package](https://img.shields.io/npm/v/@buibis/code-config?color=brightgreen)](https://www.npmjs.com/package/@buibis/code-config)
 
 > 工欲善其事，必先利其器。
